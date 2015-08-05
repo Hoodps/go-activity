@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"fmt"
+	//"fmt"
 	"github.com/astaxie/beego"
 )
 
@@ -10,5 +10,5 @@ type BaseController struct {
 }
 
 func (this *BaseController) Prepare() {
-	fmt.Println("first")
+	//fmt.Println("first")
 }

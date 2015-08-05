@@ -1,7 +1,8 @@
 package controllers
 
 import (
-//"fmt"
+	"fmt"
+	"github.com/Hoodps/go-activity/util"
 )
 
 type WheelController struct {
@@ -16,12 +17,16 @@ type Info struct {
 
 func (this *WheelController) Index() {
 	//fmt.Println("indexss")
+
+	tk1 := util.Get_rand_chars(12)
+	fmt.Println(tk1)
+	this.Data["tk1"] = tk1
 	this.TplNames = "wheel/index.html"
 }
 
 func (this *WheelController) Index_data() {
 	out := make(map[string]interface{})
-	list := []Info{
+	list := []*Info{
 		{"Macbook", "4", "3"},
 		{"Iphone 6s", "3", "3"},
 		{"Ipad 2", "2", "3"},
