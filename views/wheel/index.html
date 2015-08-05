@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<title>大转盘2015</title>
+<link type="text/css" rel="stylesheet" href="/static/wheel/css/style.css?>" />
+</head>
+
+<body>
+<div class="container">
+	<div class="top-banner">
+        <img src="/static/wheel/img/banner.png" class="top-logo" />  
+    </div>
+    <div class="award-show-list">
+        <ul></ul>
+    </div>
+    <section id="lottery" class="box1">
+        <div class="award-box">
+            <em class="award-point" id="award-point"></em>
+            <em class="award-btn" id="btn-start"></em>
+        </div>
+    </section>
+    <section id="my" class="box2"></section>
+    <section id="rule"></section>
+    <nav class="box1">
+        <a href="javascript:void(0)" for="my">获奖查询</a>
+    	<a href="javascript:void(0)" for="rule">活动详情</a>
+    </nav>
+</div>
+<div id="mask"></div>
+<input type="hidden" id="activity_id" value="<?php echo $activity_id;?>" />
+<input type="hidden" id="tk" value="<?php echo $tk;?>" />
+<input type="hidden" id="tk1" value="<?php echo $tk1;?>" />
+<input type="hidden" id="tk2" value="<?php echo $tk2;?>" />
+<input type="hidden" id="mobi" />
+
+<script type="text/javascript" src="/static/wheel/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/static/wheel/js/jQueryRotate.2.2.js"></script>
+<script type="text/javascript" src="/static/wheel/js/wheel.js"></script>
+</body>
+</html>
+
