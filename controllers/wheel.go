@@ -20,6 +20,10 @@ func (this *WheelController) Index() {
 
 	tk1 := util.Get_rand_chars(12)
 	fmt.Println(tk1)
+
+	fmt.Println(util.TimeNow())
+	fmt.Println(util.DateNow())
+
 	this.Data["tk1"] = tk1
 	this.TplNames = "wheel/index.html"
 }
