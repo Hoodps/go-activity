@@ -18,6 +18,13 @@ type Info struct {
 	Opps  int64
 }
 
+var list = []Info{
+	{1, "Macbook", "4", "3", 5},
+	{2, "Iphone 6s", "3", "3", 10},
+	{3, "Ipad 2", "2", "3", 20},
+	{4, "华为P7", "1", "3", 30},
+}
+
 func (this *WheelController) Index() {
 	//fmt.Println("indexss")
 
@@ -33,12 +40,7 @@ func (this *WheelController) Index() {
 
 func (this *WheelController) Index_data() {
 	out := make(map[string]interface{})
-	list := []*Info{
-		{1, "Macbook", "4", "3", 5},
-		{2, "Iphone 6s", "3", "3", 10},
-		{3, "Ipad 2", "2", "3", 20},
-		{4, "华为P7", "1", "3", 30},
-	}
+
 	//fmt.Println(list)
 	out["code"] = "0"
 	out["msg"] = "SUCCESS"
