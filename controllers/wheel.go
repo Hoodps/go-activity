@@ -3,6 +3,7 @@ package controllers
 import (
 	"fmt"
 	"github.com/Hoodps/go-activity/util"
+	"strings"
 )
 
 type WheelController struct {
@@ -10,9 +11,11 @@ type WheelController struct {
 }
 
 type Info struct {
+	Id    int64
 	Name  string
 	Level string
 	Count string
+	Opps  int64
 }
 
 func (this *WheelController) Index() {
@@ -31,10 +34,10 @@ func (this *WheelController) Index() {
 func (this *WheelController) Index_data() {
 	out := make(map[string]interface{})
 	list := []*Info{
-		{"Macbook", "4", "3"},
-		{"Iphone 6s", "3", "3"},
-		{"Ipad 2", "2", "3"},
-		{"华为P7", "1", "3"},
+		{1, "Macbook", "4", "3", 5},
+		{2, "Iphone 6s", "3", "3", 10},
+		{3, "Ipad 2", "2", "3", 20},
+		{4, "华为P7", "1", "3", 30},
 	}
 	//fmt.Println(list)
 	out["code"] = "0"
@@ -45,6 +48,8 @@ func (this *WheelController) Index_data() {
 }
 
 func (this *WheelController) Input_mobi() {
+	mobi := strings.TrimSpace(this.GetString("mobi"))
+	fmt.Println(mobi)
 	out := make(map[string]interface{})
 	list := map[string]string{"mobi": "15820284791"}
 	//fmt.Println(list)
