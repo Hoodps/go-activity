@@ -63,6 +63,12 @@ func (this *WheelController) Input_mobi() {
 	this.ServeJson()
 }
 func (this *WheelController) Run() {
+	arr := []int{}
+	for key, value := range list {
+		arr[key] = value.Opps
+	}
+
+	fmt.Println(arr)
 	out := make(map[string]interface{})
 	list := map[string]string{"name": "Macbook", "level": "1"}
 	//fmt.Println(list)
