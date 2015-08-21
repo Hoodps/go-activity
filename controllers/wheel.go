@@ -69,6 +69,7 @@ func (this *WheelController) Run() {
 	}
 
 	fmt.Println(arr)
+	fmt.Println(arr)
 	out := make(map[string]interface{})
 	list := map[string]string{"name": "Macbook", "level": "1"}
 	//fmt.Println(list)
